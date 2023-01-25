@@ -9,12 +9,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { MaterialmodeluModule } from '../materialmodelu.module';
+import { TablaUsuariosComponent } from './tabla-usuarios/tabla-usuarios.component';
 
 
 
 @NgModule({
   declarations: [
-    NavigationComponent
+    NavigationComponent,
+    TablaUsuariosComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { MaterialmodeluModule } from '../materialmodelu.module';
     MaterialmodeluModule
   ],
   exports:[
-    NavigationComponent
+    NavigationComponent,
+    TablaUsuariosComponent
   ]
 })
 export class ComponentesModule { }

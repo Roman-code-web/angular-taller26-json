@@ -1,0 +1,27 @@
+<div class="container" style="overflow-x: scroll;">
+    <table class="table">
+        <thead class="bg-primary text-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">USERNAME</th>
+            <th scope="col">EMAIL/PASSWORD</th>
+            <th scope="col">VER MAS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of listaUsuario, index as i">
+            <td >{{i+1}}</td>
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.name}}</td>
+            <td>{{usuario.username}}</td>
+            <td>{{usuario.email}}</td>
+            <td><a class="btn bg-warning" [routerLink]="['detalle/', usuario.id ]" ><i class="fa-solid fa-eye"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container py-3">
+        <p style="font-size: 1rem;">N° de Registro = <span class="fw-bold">{{listaUsuario.length}}</span> </p>
+      </div>
+</div>

@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialmodeluModule } from '../materialmodelu.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 
@@ -22,7 +23,8 @@ import { InicioComponent } from './inicio/inicio.component';
     HomeDashboardComponent,
     LoginComponent,
     UserComponent,
-    InicioComponent
+    InicioComponent,
+    DetalleComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { InicioComponent } from './inicio/inicio.component';
     HomeDashboardComponent,
     LoginComponent,
     UserComponent,
-    InicioComponent
+    InicioComponent,
+    DetalleComponent
   ]
 })
 export class PagesModule { }
