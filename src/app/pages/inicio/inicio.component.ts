@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
@@ -7,7 +7,13 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit{
+  usuario:any=[];
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit(): void {
+    this.usuario=JSON.parse(String(localStorage.getItem('user')));
+  }
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -29,5 +35,5 @@ export class InicioComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+
 }

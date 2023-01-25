@@ -1,5 +1,8 @@
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
+  <div class="container my-5">
+    <h1 class="text-center fs-1 fw-bold">Bienvenid@ {{usuario?.username}} </h1>
+  </div>
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">

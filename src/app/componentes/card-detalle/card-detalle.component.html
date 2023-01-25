@@ -19,7 +19,7 @@
                             </div>  
                             <div class="col-md-6 col-sm-12 col-xs-12" >
                                 <div class="mb-3">
-                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario.id}}">
+                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario?.id}}">
                                 </div>
                             </div>   
                             <!-------name------>
@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12" >
                                 <div class="mb-3">
-                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario.name}}">
+                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario?.name}}">
                                 </div>
                             </div>    
                             <!-------username------>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12" >
                                 <div class="mb-3">
-                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario.username}}">
+                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario?.username}}">
                                 </div>
                             </div>   
                             <!-------name------>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12" >
                                 <div class="mb-3">
-                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario.email}}">
+                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario?.email}}">
                                 </div>
                             </div>   
                             <!-------name------>
@@ -56,7 +56,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12" >
                                 <div class="mb-3">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput" disabled placeholder="street" value="{{ detalleUsuario.address.street + ' , ' + detalleUsuario.address.suite + ' , ' +detalleUsuario.address.city }}">
+                                        <input type="text" class="form-control" id="floatingInput" disabled placeholder="street" value="{{ detalleUsuario?.address?.street + ' , ' + detalleUsuario?.address?.suite + ' , ' +detalleUsuario?.address?.city }}">
                                         <label for="floatingInput">street</label>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12" >
                                 <div class="mb-3">
-                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario.phone}}">
+                                    <input type="text" disabled class="form-control" id="exampleFormControlInput1" value="{{detalleUsuario?.phone}}">
                                 </div>
                             </div>   
                         </div>

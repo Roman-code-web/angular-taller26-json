@@ -36,7 +36,6 @@ export class LoginComponent {
     this.usuarioservice.getUsuarioUsernameandPassword(this.formLogin.get('username')?.value, this.formLogin.get('email')?.value).subscribe(
       res=>{
        if(res){
-        console.log(res)
         this.router.navigate(['/home']);
        }else{
         Swal.fire({
