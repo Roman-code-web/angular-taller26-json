@@ -11,6 +11,10 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent {
   formLogin!:FormGroup;
+  mensajeError={
+    username:'',
+    email:''
+  }
   constructor( private formbuilder:FormBuilder, private usuarioservice:UsuarioService, private router:Router){
     this.formLogin= this.formbuilder.group({
       username:['',
@@ -43,24 +47,29 @@ export class LoginComponent {
       },
       error=>{}
     )
-    
-    //console.log(user)
-    /*
-    console.log(this.usuarioservice.user)
-    if(this.usuarioservice.user.lenght==0){
-      console.log('usuario no eite')
-    }else{
-      this.router.navigate(['/home']);
-    }
-    //console.log(this.formLogin.value)
-    /* this.usuarioservice.getUsuario().subscribe(
-      res=>{
-        console.log(res)
-      },
-      error=>{
-        console.log(error)
-      }
-     )
-     */
   }
+  
+//validacion formulario
+validacion(name: string) {
+  if(this.formLogin.get(name)?.errors && (this.formLogin.get(name)?.touched || this.formLogin.get(name)?.dirty)){
+    if(this.formLogin.get(name)?.errors?.['required']){
+      if(name=='username'){
+        this.mensajeError.username="el campo es requerido"; 
+      }else{
+        this.mensajeError.email="El campo es requerido";
+      }
+      
+      
+    }else if(this.formLogin.get(name)?.errors?.['minlength']){
+      if(name=='username'){
+        this.mensajeError.username="Mínimo de caracteres 3"; 
+      }else{
+        this.mensajeError.email="Mínimo de caracteres 3";
+      }
+      
+    }
+  }
+  return this.formLogin.get(name)?.errors && (this.formLogin.get(name)?.touched || this.formLogin.get(name)?.dirty);
+}
+
 }

@@ -1,8 +1,8 @@
-<div class="container py-5">
+<div class="container-fluid vh-100 bg__login py-5">
     <div class="container">
         <div class="row d-flex justify-content-center py-5">
-            <div class="col-md-6 col-sm-8 col-xs-12 border p-2">
-                <form action="" class="py-5" [formGroup]="formLogin">
+            <div class="col-md-6 col-sm-8 col-xs-12 border p-2 bg-light rounded-2">
+                <form  class="p-5" [formGroup]="formLogin">
                     <div class="container pb-5">
                         <h1 class="text-center fs-1 fw-bold">Login</h1>
                     </div>
@@ -10,20 +10,25 @@
                         <mat-form-field class="w-100">
                             <mat-label>Usuario</mat-label>
                             <input matInput class=""  formControlName="username"> 
+                            <mat-error *ngIf="validacion('username')">
+                                {{mensajeError.username}}
+                            </mat-error>
                         </mat-form-field>
                     </div>
                     <div class="mb-3">
                         <mat-form-field class="w-100">
-                            <mat-label>password</mat-label>
+                            <mat-label>password o email</mat-label>
                             <input matInput class="" formControlName="email"> 
+                            <mat-error *ngIf="validacion('email')">
+                                {{mensajeError.email}}
+                            </mat-error>
                         </mat-form-field>
                     </div>
-                    <div class="mb-3">
-                        <button mat-raised-button color="primary" class="w-100" (click)="login()">Ingresar</button>
+                    <div class="mt-5 mb-3">
+                        <button mat-raised-button [disabled]="formLogin.invalid"  color="accent" class="w-100" (click)="login()">Ingresar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-        
 </div>
