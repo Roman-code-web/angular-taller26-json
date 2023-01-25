@@ -11,6 +11,9 @@ import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { ComponentesModule } from '../componentes/componentes.module';
 import { RouterModule } from '@angular/router';
+import { MaterialmodeluModule } from '../materialmodelu.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
@@ -18,7 +21,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HomeDashboardComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    InicioComponent
   ],
   imports: [
     CommonModule,
@@ -29,10 +33,14 @@ import { RouterModule } from '@angular/router';
     MatButtonModule,
     LayoutModule,
     ComponentesModule,
-    RouterModule
+    RouterModule,
+    MaterialmodeluModule,
+    ReactiveFormsModule
   ],exports:[
     HomeDashboardComponent,
     LoginComponent,
+    UserComponent,
+    InicioComponent
   ]
 })
 export class PagesModule { }

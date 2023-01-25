@@ -1,3 +1,29 @@
-<p>login works!</p>
-
-<a routerLink="/home" class="btn btn-primary"> entrar al dashborad</a>
+<div class="container py-5">
+    <div class="container">
+        <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-6 col-sm-8 col-xs-12 border p-2">
+                <form action="" class="py-5" [formGroup]="formLogin">
+                    <div class="container pb-5">
+                        <h1 class="text-center fs-1 fw-bold">Login</h1>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field class="w-100">
+                            <mat-label>Usuario</mat-label>
+                            <input matInput class=""  formControlName="username"> 
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field class="w-100">
+                            <mat-label>password</mat-label>
+                            <input matInput class="" formControlName="email"> 
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <button mat-raised-button color="primary" class="w-100" (click)="login()">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        
+</div>
