@@ -10,13 +10,15 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { MaterialmodeluModule } from '../materialmodelu.module';
 import { TablaUsuariosComponent } from './tabla-usuarios/tabla-usuarios.component';
+import { CardDetalleComponent } from './card-detalle/card-detalle.component';
 
 
 
 @NgModule({
   declarations: [
     NavigationComponent,
-    TablaUsuariosComponent
+    TablaUsuariosComponent,
+    CardDetalleComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { TablaUsuariosComponent } from './tabla-usuarios/tabla-usuarios.componen
   ],
   exports:[
     NavigationComponent,
-    TablaUsuariosComponent
+    TablaUsuariosComponent,
+    CardDetalleComponent
   ]
 })
 export class ComponentesModule { }

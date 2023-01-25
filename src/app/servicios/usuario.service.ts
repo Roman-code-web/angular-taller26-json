@@ -15,7 +15,7 @@ export class UsuarioService {
     return  this.http.get<any>(this.urlJSON);
   }
 
-  //obtener usuarios por username y email
+  //Login: obtener usuarios por username y email
   getUsuarioUsernameandPassword(username:string, email:string){
     return this.getUsuario().pipe(
         map((usuario) => {
@@ -32,5 +32,10 @@ export class UsuarioService {
           }
         })
     )
+  }
+  //obtener usuario por id
+  getUsuarioId(id:number){
+    console.log(`${this.urlJSON}/${id}`);
+    return this.http.get<any>(this.urlJSON + `/` + id );
   }
 }
