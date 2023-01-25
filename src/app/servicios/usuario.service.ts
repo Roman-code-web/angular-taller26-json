@@ -8,6 +8,7 @@ export class UsuarioService {
   user:any=[];
   //url
   urlJSON="https://jsonplaceholder.typicode.com/users";
+
   constructor(private http:HttpClient) { }
 
   //obtenemos usuarios
@@ -37,5 +38,17 @@ export class UsuarioService {
   getUsuarioId(id:number){
     console.log(`${this.urlJSON}/${id}`);
     return this.http.get<any>(this.urlJSON + `/` + id );
+  }
+
+  //si esta logeado
+  islogeado(){
+    if(localStorage.getItem('user')){
+      return true;
+    }else{
+      return false
+    }
+  }
+  logoutUser(){
+    localStorage.removeItem('user');
   }
 }
